@@ -16,14 +16,13 @@ class AppController extends Action {
     }
 
     public function timeline() {
-
         $this->validarAutenticacao();
+
         $this->view->validaTweet = isset($_GET['tweet']) ? $_GET['tweet'] : '';
        
         $tweet = Container::getModel('Tweet');
         $tweet->__set('id_usuario', $_SESSION['id']);
 
-        // Recuperação dos tweets do usuário
         $allTweets = $tweet->listarTweets();
         $this->view->tweets = $allTweets;
 
@@ -39,7 +38,6 @@ class AppController extends Action {
     }
 
     public function tweet() {
-
         $this->validarAutenticacao();
 
         $tweet = Container::getModel('Tweet');
@@ -52,12 +50,11 @@ class AppController extends Action {
         } else {
             header('Location: /timeline?tweet=error');
         }
-
     }
  
     public function quemSeguir() {
-
         $this->validarAutenticacao();
+
         $usuarios = array();
         $usuario = Container::getModel('Usuario');
         $usuario->__set('id', $_SESSION['id']);
@@ -104,5 +101,4 @@ class AppController extends Action {
         $classTweet->excluir();
         header('Location: /timeline');
     }
-
 }

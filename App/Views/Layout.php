@@ -17,7 +17,7 @@
     <script src="https://kit.fontawesome.com/84e2a49ead.js"></script>
     <script src="/js/sweetalert2.all.min.js"></script>
 
-    <title>Twitter</title>
+    <title>Twitter Clone</title>
 </head>
 <body>
 

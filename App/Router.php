@@ -20,5 +20,4 @@ class Router extends Bootstrap {
 
         $this->setRoutes($routes);
     }
-    
 }

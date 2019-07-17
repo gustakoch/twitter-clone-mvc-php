@@ -13,5 +13,4 @@ class ConnectionDatabase {
             echo "Connection error database! <br><br>" . $error->getMessage();
         }
     }
-
 }

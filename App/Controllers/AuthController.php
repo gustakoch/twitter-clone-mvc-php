@@ -13,7 +13,6 @@ class AuthController extends Action {
         $classUsuario->__set('email', $_POST['email']);
         $classUsuario->__set('senha', strtoupper(sha1(['senha'])));
 
-        // Verificando se o e-mail e senha estão presentes no banco de dados
         $classUsuario->verificaSeUsuarioExiste();
 
         if ($classUsuario->__get('id') != '' && $classUsuario->__get('nome') != '') {
@@ -33,5 +32,4 @@ class AuthController extends Action {
         session_destroy();
         header('Location: /');
     }
-
 }

@@ -8,7 +8,6 @@ use GK\Model\Container;
 class IndexController extends Action {
 
     public function index() {
-        // Faz a tratativa de erro do parametro passado via get
         $this->view->loginError = isset($_GET['login']) ? $_GET['login'] : '';
         $this->view->error = "";
         $this->render('index');
@@ -34,8 +33,6 @@ class IndexController extends Action {
             $this->render('cadastro');
         } else {
             header('Location: /inscreverse?cadastro=error');
-            print_r($resultValidacao);
         }
     }
-
 }
