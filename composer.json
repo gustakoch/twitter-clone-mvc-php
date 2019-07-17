@@ -1,0 +1,18 @@
+{
+  "name": "A simple MVC structure who you can use to start other projects",
+  "require": {
+    "php": ">= 7.0"
+  },
+  "authors": [
+    {
+      "name": "Gustavo Koch",
+      "email": "gustavok@outlook.com.br"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/",
+      "GK\\": "vendor/GK/"
+    }
+  }
+}
